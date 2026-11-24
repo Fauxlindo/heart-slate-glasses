@@ -42,7 +42,7 @@ body {
 
 /* 超链接 */
 a {
-    color: #594563;
+    color: #493453;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
@@ -54,11 +54,11 @@ a {
 }
 
 a:visited {
-    color: #594563;
+    color: #493453;
 }
 
 a:hover {
-    color: #80668b;
+    color: #70577d;
 }
 
 /* 故事页面导航 */
@@ -76,7 +76,7 @@ a:hover {
 /* 已观测的故事 */
 .story-list a.story-observed,
 .story-list a.story-observed:visited {
-    color: #888;
+    color: #777;
     font-style: italic;
 }
 
