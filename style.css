@@ -1,0 +1,117 @@
+/* 全局设置 */
+body {
+    margin: 0;
+}
+
+/* 目录页面 */
+.catalog {
+    max-width: 760px;
+    margin: 100px auto;
+    padding: 0 30px;
+}
+
+.catalog-header {
+    margin-bottom: 60px;
+}
+
+.story-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* 故事阅读页面 */
+.story-page {
+    max-width: 680px;
+    margin: 100px auto;
+    padding: 0 30px;
+}
+
+/* 故事标题 */
+#story-title {
+    margin-bottom: 50px;
+}
+
+/* 故事正文 */
+#story-content {
+    white-space: pre-wrap;
+    font-size: 17px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+/* 超链接 */
+a {
+    color: #594563;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* 继续观测 */
+#continue-entry {
+    display: inline-block;
+    margin-top: 60px;
+}
+
+a:visited {
+    color: #594563;
+}
+
+a:hover {
+    color: #80668b;
+}
+
+/* 故事页面导航 */
+#continue-entry {
+    display: block;
+    margin-top: 60px;
+}
+
+#return-entry {
+    display: block;
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+/* 已观测的故事 */
+.story-list a.story-observed,
+.story-list a.story-observed:visited {
+    color: #888;
+    font-style: italic;
+}
+
+/*字体*/
+#story-title,
+.catalog-header h1,
+.story-page h1 {
+    font-family: Georgia, "Noto Serif SC", serif;
+}
+
+/* 大标题水印 */
+.site-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: #e4e1e5;
+    font-size: clamp(36px, 6vw, 80px);/*最小值, 首选值, 最大值*/
+    font-family: Georgia, "Noto Serif SC", serif;
+    font-weight: bold;
+
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+    /* 保留你原来的其他设置 */
+    transform: translateY(-30px);
+}
+
+.catalog,
+.story-page {
+    position: relative;
+}
+
+.catalog-header,
+.story-page h1 {
+    position: relative;
+    z-index: 1;
+}
