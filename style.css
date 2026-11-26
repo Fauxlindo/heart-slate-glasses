@@ -47,11 +47,7 @@ a {
     text-underline-offset: 3px;
 }
 
-/* 继续观测 */
-#continue-entry {
-    display: inline-block;
-    margin-top: 60px;
-}
+
 
 a:visited {
     color: #493453;
@@ -61,7 +57,7 @@ a:hover {
     color: #70577d;
 }
 
-/* 故事页面导航 */
+/* 故事页面导航 *//* 继续观测 */
 #continue-entry {
     display: block;
     margin-top: 60px;
@@ -91,8 +87,8 @@ a:hover {
 .site-watermark {
     position: absolute;
     top: 0;
-    left: 0;
-
+    left: 50%;
+    transform: translate(-50%, -30px);
     color: #e4e1e5;
     font-size: clamp(36px, 6vw, 80px);/*最小值, 首选值, 最大值*/
     font-family: Georgia, "Noto Serif SC", serif;
@@ -101,8 +97,6 @@ a:hover {
     white-space: nowrap;
     pointer-events: none;
     z-index: 0;
-    /* 保留你原来的其他设置 */
-    transform: translateY(-30px);
 }
 
 .catalog,
@@ -114,4 +108,16 @@ a:hover {
 .story-page h1 {
     position: relative;
     z-index: 1;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #dedade;
+}
+.story-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
 }

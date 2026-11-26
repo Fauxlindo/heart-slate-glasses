@@ -98,32 +98,24 @@ if (observedAfterword && afterwordEntry) {
 
     }
 
-    // 4. 点击重新开始观测
-    if (allObserved) {
+// 4. 点击重新开始观测
+if (allObserved) {
 
-        observeEntry.addEventListener("click", function(event) {
+    observeEntry.addEventListener("click", function(event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
-            // 清除之前的观测记录
-            localStorage.removeItem("observedStories");
+        // 清除之前的观测记录
+        localStorage.removeItem("observedStories");
+        localStorage.removeItem("observedAfterword");
 
-            // 重新随机进入一篇故事
-            const randomIndex = Math.floor(
-                Math.random() * stories.length
-            );
+        // 返回目录页
+        window.location.href = "index.html";
 
-            const selectedStory = stories[randomIndex];
-
-            window.location.href =
-                "story.html?story=" + encodeURIComponent(selectedStory);
-
-        });
-
-    }
+    });
 
 }
-
+}
 
  // 4. 检查当前页面是否存在故事标题元素
 const titleElement = document.querySelector("#story-title");
@@ -222,6 +214,7 @@ if (continueEntry) {
 // 检查当前是否为后记页面
 const isAfterwordPage =
     window.location.pathname.endsWith("afterword.html");
+
 
 if (isAfterwordPage) {
 
